@@ -14,3 +14,4 @@ Rx==1.6.0
 singledispatch==3.4.0.3
 six==1.11.0
 typing==3.6.4
+uWSGI==2.0.16

@@ -7,3 +7,6 @@
 ### Reload supervisord:
 
 ```$ supervisorctl restart uwsgi```
+
+### Stop supervisord:
+```$ supervisorctl stop uwsgi```

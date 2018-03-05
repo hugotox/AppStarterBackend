@@ -11,7 +11,7 @@ urlpatterns = [
     path('logout', LogoutView.as_view()),
     path('whoami', WhoAmI.as_view()),
     # TODO: check if we can user graphql and csrf cookie
-    path('api/graphql', csrf_exempt(GraphQLView.as_view(graphiql=settings.DEBUG))),
+    path('graphql', csrf_exempt(GraphQLView.as_view(graphiql=settings.DEBUG))),
     re_path(r'^data/(?P<id>\w+)/$', TestEndPoint.as_view()),
     re_path(r'^static/test.json/$', TestJSON.as_view()),
 ]

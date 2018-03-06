@@ -13,3 +13,9 @@
 
 ### Kill supervisord:
 ```$ sudo unlink /tmp/supervisor.sock```
+
+## Run with Docker
+
+```$ docker build -t backend .```
+
+```$ docker run -d -p 80:80 backend```

@@ -2,7 +2,7 @@
 
 ### Run supervisord:
 
-```$ supervisord -c supervisord.conf```
+```$ supervisord -c supervisor-app.conf```
 
 ### Reload supervisord:
 

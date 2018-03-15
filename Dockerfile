@@ -36,5 +36,5 @@ RUN pip3 install -r /home/docker/code/requirements.txt
 # add the rest of the code
 COPY . /home/docker/code/
 
-EXPOSE 80
+EXPOSE 8000
 CMD ["supervisord", "-n"]

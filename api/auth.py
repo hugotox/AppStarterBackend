@@ -1,11 +1,12 @@
 from django.contrib.auth import login, logout
+from django.contrib.auth.models import Group
 from rest_framework.compat import authenticate
 from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
-from api.serializers import UserSerializer
+from api.serializers import UserSerializer, GroupSerializer
 
 
 class LoginView(APIView):
@@ -38,3 +39,10 @@ class WhoAmI(APIView):
             return Response({"user": UserSerializer(request.user).data})
         else:
             return Response({"user": None})
+
+
+class UserGroupView(APIView):
+    permission_classes = (AllowAny,)
+
+    def get(self, request):
+        return Response(GroupSerializer(Group.objects.all(), many=True).data)
